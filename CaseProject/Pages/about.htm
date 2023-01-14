@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="The Gathering, Magic The Gathering, shop and how to play.">
+    <title>The Gathering - About</title>
+    <link href="/Pages/styles.css" rel="stylesheet">
+    <script src="modernizr.custom.05819.js"></script>
+
+</head>
+
+
+<body>
+
+<header>
+    <h1><a href="/Pages/index.htm">LongDawg - Dachshund Website</a></h1>
+</header>
+
+<nav>
+    <ul>
+      <li><a href="/Pages/index.htm">Home</a></li>
+      <li><a href="/Pages/caretaking.htm">Caretaking</a></li>
+      <li><a href="/Pages/breed.htm">Breed Info</a></li>
+      <li><a href="/Pages/adopt.htm">Adopt A Dach</a></li>
+      <li><a href="/Pages/contact.htm">Contact</a></li>
+    </ul>
+  </nav>
+
+      <main>
+        <h2>Contact Fish Creek</h2>
+
+        <p>
+          Fill out the form below to contact Fish Creek. All information is
+          required.
+        </p>
+
+        <form
+          method="post"
+          action="mailto:longdawgwebsite@gmail.com"
+        >
+          <label for="myName">Name:</label>
+          <input type="text" name="myName" id="myName" required />
+          <label for="myEmail">Email:</label>
+          <input type="email" name="myEmail" id="myEmail" required />
+          <label for="myReason">Reason for Contact:</label>
+          <input type="text" name="theReason" id="theReason" list="reasons" required />
+          <datalist id="reasons">
+            <option value="Question" label="Question"></option>
+            <option value="Comment" label="Comment"></option>
+            <option value="Concern" label="Concern"></option>
+          </datalist>
+
+          <label for="myComments">Comments:</label>
+          <textarea
+            name="myComments"
+            id="myComments"
+            rows="3"
+            cols="20"
+            required
+          ></textarea>
+          <input id="mySubmit" type="submit" value="Send" />
+        </form>
+        <p>Thank you for visiting us!<br>
+        Created by Coty O'Dea<br>
+        <div class="addy">
+            The Gathering - A MTG Website <br />
+            800-555-5555<br />
+            1123 Squeaker Drive<br />
+            Magic Town, CA 90210
+          </div>
+      </main>
+
+      <footer>
+        Copyright &copy; 2023 The Gathering<br />
+    
+        <a href="mailto:TheJavascriptGathering@gmail.com"
+          >TheJavaScriptGathering@gmail.com</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
