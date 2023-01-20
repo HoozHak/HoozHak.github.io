@@ -45,13 +45,44 @@
       </p>
     </section>
 
-    <section>
-      <h2>Don't Forget To <a href="shop.htm">Check Out The Shop!</a></h2>
+    <article>
+      <h2>Current Card Availability</h2>
+      <form>
+         <input type="checkbox" id="giver" value="5.30" />
+         <label for="giver">Giver of Runes ($5.30)</label>
+         <input type="checkbox" id="heartless" value="1.60" />
+         <label for="heartless">Heartless Hidetsugu ($1.60)</label>
+         <input type="checkbox" id="iymrith" value="3" />
+         <label for="iymrith">Iymrith, Desert Doom (Borderless) ($3.00)</label>
+         <input type="checkbox" id="sneakAttack" value="5.50" />
+         <label for="sneakAttack">Sneak Attack ($5.50)</label>
+         <input type="checkbox" id="stifle" value="3.50" />
+         <label for="stifle">Stifle ($3.50)</label>
+         <input type="submit" id="submit" value="Submit" />
+      </form>
+   </article>
+   <script> 
+      function calcTotal() {
+         var itemTotal = 0;
+         var giver = document.getElementById("giver");
+         var heartless = document.getElementById("heartless");
+         var iymrith = document.getElementById("iymrith");
+         var sneakAttack = document.getElementById("sneakAttack");	
+         var stifle = document.getElementById("stifle");
+         (giver.checked) ? (itemTotal += 5.3) : (itemTotal += 0);
+         (heartless.checked) ? (itemTotal += 1.6) : (itemTotal += 0);
+         (iymrith.checked) ? (itemTotal += 3) : (itemTotal += 0);
+         (sneakAttack.checked) ? (itemTotal += 5.5) : (itemTotal += 0);
+         (stifle.checked) ? (itemTotal += 3.5) : (itemTotal += 0);
+         var salesTaxRate = 0.07;
+         itemTotal *= 100;
+         var orderTotal = (itemTotal + (itemTotal * salesTaxRate)) / 100;
+         alert("Your order total is $" + orderTotal);
+      }
 
-      <p>
-        
-      </p>
-    </section>
+      document.getElementById("submit"). addEventListener("click", calcTotal, false);
+
+   </script>
 
     <div class="addy">
       The Gathering - A MTG Website <br />
