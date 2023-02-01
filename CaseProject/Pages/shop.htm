@@ -22,7 +22,7 @@
     <ul>
       <li><a href="index.htm">Home</a></li>
       <li><a href="rules.htm">How To Play</a></li>
-      <li><a href="shop.htm">Buy Something</a></li>
+      <li><a href="shop.htm">Shop</a></li>
       <li><a href="about.htm">About Us</a></li>
     </ul>
   </nav>
@@ -30,22 +30,63 @@
   <main>
     <!-- <!= =====================THIS IS THE CONTENT AREA================================> -->
 
-    <!-- <section>
-    <h2></h2>
-    <p>
-      
-    </p>
-  </section>
-
-    <section>
-      <h2></h2>
-
-      <p>
-        
-      </p>
-    </section> -->
-
     <article>
+
+      <h2>See Before You Buy</h2>
+      <article>
+        <div id="results">
+            <ul>
+               <li id="item1"></li>
+               <li id="item2"></li>
+               <li id="item3"></li>
+               <li id="item4"></li>
+               <li id="item5"></li>
+            </ul>
+            <p id="resultsExpl"></p>
+        </div>
+        <form>
+            <fieldset>
+              <label for="toolBox" id="placeLabel">
+                Scroll through the available cards:
+              </label>
+              <input type="text" id="toolBox" />
+            </fieldset>
+            <fieldset>
+              <button type="button" id="next">Next</button>
+              <button type="button" id="previous">Previous</button>
+            </fieldset>
+        </form>
+     </article>
+     <script>
+  
+        let i = 1;
+        let listItem = "";
+  
+        function processInput ()
+        {
+           if (i <= 5)
+           {
+              listItem = "item" + i;
+              document.getElementById(listItem).textContent = document.getElementById("toolBox").value;
+  
+              document.getElementById("toolBox").value = "";
+  
+              if (i == 5)
+              {
+                 document.getElementById("resultsExpl").textContent = "Thanks for your suggestions.";
+              }
+  
+              i += 1;
+           }
+        };
+  
+        document.getElementById("button").addEventListener("click", processInput);
+     </script>
+
+
+
+
+
       <h2>Current Card Availability</h2>
       <form>
          <input type="checkbox" id="giver" value="5.30" />
@@ -84,21 +125,30 @@
 
    </script>
 
-    <div class="addy">
-      The Gathering - A MTG Website <br />
-      800-555-5555<br />
-      1123 Squeaker Drive<br />
-      Magic Town, CA 90210
-    </div>
-  </main>
 
-  <footer>
-    Copyright &copy; 2023 The Javascript Gathering<br />
 
-    <a href="mailto:TheJavascriptGathering@gmail.com"
-      >TheJavaScriptGathering@gmail.com</a
-    >
-  </footer>
+<section>
+  <br>
+  <h2>Don't Forget To <a href="shop.htm">Check Out The Shop!</a></h2>
+  <br>
+</section>
+
+<div class="addy">
+  The Gathering - A MTG Website <br />
+  800-555-5555<br />
+  1123 Squeaker Drive<br />
+  Magic Town, CA 90210<br>
+</div>
+</main>
+
+<footer>
+<br>
+Copyright &copy; 2023 The Javascript Gathering<br />
+
+<a href="mailto:TheJavascriptGathering@gmail.com"
+  >TheJavaScriptGathering@gmail.com</a
+>
+</footer>
 </div>
 </body>
 </html>
