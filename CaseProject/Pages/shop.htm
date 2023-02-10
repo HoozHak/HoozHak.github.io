@@ -5,6 +5,11 @@
 
 <meta charset="utf-8">
 <meta name="description" content="The Gathering, Magic The Gathering, shop and how to play.">
+
+<style>
+   #image {display: none;}
+</style>
+
 <title>The Gathering - Shop</title>
 <link href="styles.css" rel="stylesheet">
 <script src="modernizr.custom.05819.js"></script>
@@ -27,14 +32,20 @@
     </ul>
   </nav>
 
+
+
   <main>
     <!-- <!= =====================THIS IS THE CONTENT AREA================================> -->
 
-    <article>
+    <h2>See Before You Buy</h2>
 
-      <h2>See Before You Buy</h2>
+
+   
+    
+
+      
       <article>
-        <div id="results">
+       <!--  <div id="results">
             <ul>
                <li id="item1"></li>
                <li id="item2"></li>
@@ -43,21 +54,64 @@
                <li id="item5"></li>
             </ul>
             <p id="resultsExpl"></p>
-        </div>
+        </div> -->
+
+        <img src="giver.jpg" alt="Giver of Runes" id="giver" width="158px" height="227px" style="vertical-align:middle;margin:50px 0px" />
+        <img src="heartless.jpg" alt="Heartless Hidetsugu" id="heartless" width="179px" height="259px" style="vertical-align:middle;margin:50px 0px" />
+        <img src="sneakAttack.jpg" alt="Sneak Attack" id="sneak" width="264px" height="378px" style="vertical-align:middle;margin:50px 0px" />
+        <img src="iymrith.jpg" alt="Iymrith Desert Doom" id="iymrith" width="172px" height="240px" style="vertical-align:middle;margin:50px 0px" />
+        <img src="stifle.jpg" alt="Stifle" id="stifle" width="152px" height="216px" style="vertical-align:middle;margin:50px 0px" />
+
         <form>
             <fieldset>
               <label for="toolBox" id="placeLabel">
                 Scroll through the available cards:
               </label>
-              <input type="text" id="toolBox" />
+              <show id="toolBox" />
             </fieldset>
             <fieldset>
-              <button type="button" id="next">Next</button>
-              <button type="button" id="previous">Previous</button>
+              <button type="button" onclick="handleImageChangeNext()" id='forward'>Next</button>
+              <button type="button" onclick="handleImageChangeBack()" id='backward'>Previous</button>
             </fieldset>
         </form>
      </article>
+
      <script>
+
+      function show()
+      {
+         document.getElementById()
+      }
+
+      const imageData = [ "giver.jpg", "heartless.jpg" , "iymrith.jpg" , "sneakAttack.jpg", "stifle.jpg" ];
+      const currentImage = 0;
+   
+      const handleImageChangeNext = (direction) => 
+      {
+         if (direction == 'forward')
+            currentImage = (currentImage + 1) % imageData.length;
+            console.log(imageData[currentImage]);
+          else
+            currentImage = (currentImage - 1 + imageData.length) % imageData.length;
+      }
+   
+      const handleImageChangeBack = (direction) => 
+      {
+         if (direction == 'backward')
+            currentImage = (currentImage - 1) % imageData.length;
+            console.log(imageData[currentImage]);
+         else
+            currentImage = (currentImage - 1 + imageData.length) % imageData.length;
+      }
+   
+   
+   
+      document.getElementById("button").addEventListener('forward', handleImageChangeNext);
+      document.getElementById("button").addEventListener('backward', handleImageChangeBack);
+   </script>
+     
+     <!-- This is to create a form for storing 5 values in an array -->
+     <!-- <script>
   
         let i = 1;
         let listItem = "";
@@ -80,8 +134,8 @@
            }
         };
   
-        document.getElementById("button").addEventListener("click", processInput);
-     </script>
+        document.getElementById("button").addEventListener("next", handleImageChangeNext);
+     </script> -->
 
 
 
