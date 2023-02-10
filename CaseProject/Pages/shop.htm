@@ -5,14 +5,9 @@
 
 <meta charset="utf-8">
 <meta name="description" content="The Gathering, Magic The Gathering, shop and how to play.">
-
-<style>
-   #image {display: none;}
-</style>
-
 <title>The Gathering - Shop</title>
 <link href="styles.css" rel="stylesheet">
-<script src="modernizr.custom.05819.js"></script>
+<!-- <script src="modernizr.custom.05819.js"></script> -->
 
 </head>
 
@@ -45,97 +40,61 @@
 
       
       <article>
-       <!--  <div id="results">
-            <ul>
-               <li id="item1"></li>
-               <li id="item2"></li>
-               <li id="item3"></li>
-               <li id="item4"></li>
-               <li id="item5"></li>
-            </ul>
-            <p id="resultsExpl"></p>
-        </div> -->
 
-        <img src="giver.jpg" alt="Giver of Runes" id="giver" width="158px" height="227px" style="vertical-align:middle;margin:50px 0px" />
-        <img src="heartless.jpg" alt="Heartless Hidetsugu" id="heartless" width="179px" height="259px" style="vertical-align:middle;margin:50px 0px" />
+<!-- Starting with one card shown on screen at a time. This is the top of the image scroller -->
+        
+      <img id="mainimage" src="giver.jpg" alt="Giver of Runes"  width="158px" height="227px" style="vertical-align:middle;margin:50px 0px" />
+        <!-- <img src="heartless.jpg" alt="Heartless Hidetsugu" id="heartless" width="179px" height="259px" style="vertical-align:middle;margin:50px 0px" />
         <img src="sneakAttack.jpg" alt="Sneak Attack" id="sneak" width="264px" height="378px" style="vertical-align:middle;margin:50px 0px" />
         <img src="iymrith.jpg" alt="Iymrith Desert Doom" id="iymrith" width="172px" height="240px" style="vertical-align:middle;margin:50px 0px" />
-        <img src="stifle.jpg" alt="Stifle" id="stifle" width="152px" height="216px" style="vertical-align:middle;margin:50px 0px" />
+        <img src="stifle.jpg" alt="Stifle" id="stifle" width="152px" height="216px" style="vertical-align:middle;margin:50px 0px" /> -->
 
         <form>
             <fieldset>
               <label for="toolBox" id="placeLabel">
                 Scroll through the available cards:
               </label>
-              <show id="toolBox" />
+              <!-- <input type="text" id="toolBox" /> -->
             </fieldset>
             <fieldset>
-              <button type="button" onclick="handleImageChangeNext()" id='forward'>Next</button>
-              <button type="button" onclick="handleImageChangeBack()" id='backward'>Previous</button>
+              <button type="button"  id='forwardbutton'>Next</button>
+              <button type="button"  id='backbutton'>Previous</button>
             </fieldset>
         </form>
      </article>
 
+
+
      <script>
 
-      function show()
-      {
-         document.getElementById()
-      }
-
       const imageData = [ "giver.jpg", "heartless.jpg" , "iymrith.jpg" , "sneakAttack.jpg", "stifle.jpg" ];
-      const currentImage = 0;
+      let currentImage = 0;
+      let mainimage = document.getElementById('mainimage');
    
-      const handleImageChangeNext = (direction) => 
+// This controls the flow of the buttons. This way the user can go forward or backward
+
+      const handleImageChange = (direction) => 
       {
-         if (direction == 'forward')
+         if (direction == 'forward') {
             currentImage = (currentImage + 1) % imageData.length;
             console.log(imageData[currentImage]);
-          else
-            currentImage = (currentImage - 1 + imageData.length) % imageData.length;
-      }
-   
-      const handleImageChangeBack = (direction) => 
-      {
-         if (direction == 'backward')
-            currentImage = (currentImage - 1) % imageData.length;
+            // !! Added below. 
+            mainimage.src = imageData[currentImage];
+         }
+          else if (direction === 'backward') {
+            currentImage = (currentImage - 1 + imageData.length) % imageData.length; 
             console.log(imageData[currentImage]);
-         else
-            currentImage = (currentImage - 1 + imageData.length) % imageData.length;
+            mainimage.src = imageData[currentImage];
+         }
       }
    
    
    
-      document.getElementById("button").addEventListener('forward', handleImageChangeNext);
-      document.getElementById("button").addEventListener('backward', handleImageChangeBack);
+      document.getElementById("forwardbutton").addEventListener('click', function () {handleImageChange('forward')});
+      document.getElementById("backbutton").addEventListener('click', function () {handleImageChange('backward')});
    </script>
      
-     <!-- This is to create a form for storing 5 values in an array -->
-     <!-- <script>
-  
-        let i = 1;
-        let listItem = "";
-  
-        function processInput ()
-        {
-           if (i <= 5)
-           {
-              listItem = "item" + i;
-              document.getElementById(listItem).textContent = document.getElementById("toolBox").value;
-  
-              document.getElementById("toolBox").value = "";
-  
-              if (i == 5)
-              {
-                 document.getElementById("resultsExpl").textContent = "Thanks for your suggestions.";
-              }
-  
-              i += 1;
-           }
-        };
-  
-        document.getElementById("button").addEventListener("next", handleImageChangeNext);
-     </script> -->
+     
 
 
 
@@ -183,7 +142,7 @@
 
 <section>
   <br>
-  <h2>Don't Forget To <a href="shop.htm">Check Out The Shop!</a></h2>
+  <h2>Don't Forget To Check Weekly For The Deals!</a></h2>
   <br>
 </section>
 
