@@ -66,7 +66,7 @@
                 if(document.getElementById("inStore").checked === true){payment.push("inStore");}
                 if(document.getElementById("PayPal").checked === true){payment.push("PayPal");}
                 //output
-                document.write("Congratulations! You just ordered a delicious " + crustType + " pizza pie with " + toppings + " fresh toppings" + "<br>" + "You will be paying with " + payment);
+                document.write("Congratulations! You just ordered a delicious " + crustType + " pizza pie with your chosen fresh toppings of: " + toppings + "<br>" + "You will be paying with " + payment);
             }
             document.getElementById("submit").addEventListener("click",Calculate,false);
         </script>
