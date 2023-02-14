@@ -1,0 +1,305 @@
+/*	Coty O'Dea  This is how you add a comment in CSS	*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5280c5;
+  color: #003366;
+  margin: 0;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+/* main {
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: #ffffff;
+  border: 1px solid medium #aec3e3;
+  overflow: auto;
+  display: block;
+} */
+
+/* header {
+  background-image: url(lilfish.gif);
+  background-color: #000066;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 1em;
+  color: #f0f0f0;
+  font-family: Georgia, "Times New Roman", serif;
+  /* padding: block; */
+/* }  */
+
+/* header a:link {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+header a:visited {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+header a:hover {
+  text-decoration: none;
+  color: #aec3e3;
+}
+header a:active {
+  text-decoration: none;
+} */
+
+/* h1 {
+  text-shadow: #cccccc;
+  padding: 0.2em;
+  font-size: 2em;
+  animation-duration: 5s;
+  animation-name: fadein;
+  animation-timing-function: ease-out;
+}
+
+h2 {
+  font-size: 1.2em;
+  text-shadow: 1px 1px 1px #777;
+}
+
+nav {
+  text-decoration: none;
+  text-align: center;
+}
+
+nav ul {
+  text-decoration: none;
+  list-style-type: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav li {
+  text-decoration: none;
+  flex-direction: column;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  width: 100%;
+  border-bottom: 1px solid;
+}
+
+a:link {
+  color: #000066;
+}
+
+a:visited {
+  color: #5280c5;
+}
+
+a:active {
+  color: #3262a3;
+}
+
+dt {
+  color: #5280c5;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.category {
+  font-weight: bold;
+  color: #5380c5;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.address {
+  clear: left;
+} */
+
+/* .floatright {
+  float: right;
+  padding-left: 1em;
+  padding-right: 1em;
+} */
+
+/* section { */
+  /* float: left;
+  width: 30%; */
+  /* margin-right: 1em;
+  margin-bottom: 1em;
+  padding: 0;
+  background-color: #eaeaea; */
+  /* min-height: 200px; */
+/* } */
+
+/* section h3 {
+  padding: 0.25em;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 110%;
+  background-color: #aec3e3;
+}
+
+section p {
+  padding-top: 0;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  padding-bottom: 0.25em;
+} */
+
+footer {
+  font-style: italic;
+  text-align: center;
+  padding: 1em;
+  background-color: #aec3e3;
+  font-size: 0.7em;
+}
+
+/* margins can be set to 0, pixel units, em units, percentages, or auto */
+/* #wrapper {
+  background-color: #f0f0f0;
+} */
+
+/* #mobile {
+  display: inline;
+}
+
+#desktop {
+  display: none;
+} */
+
+/* footer nav	{	background-color: #F0F0F0;
+			font-size: 110%;
+			padding-bottom: .5em
+									}
+*/
+
+/* table {
+  margin: 1em;
+  border: 2px solid darkblue;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.5em;
+  border: 1px solid darkblue;
+} */
+
+/* this is form configuration */
+form {
+  /* display: flex; */
+  flex-direction: row;
+  padding-left: 1em;
+  width: 80%;
+}
+/* input,
+textarea {
+  margin-bottom: 0.5em;
+}
+
+label {
+  text-align: right;
+}
+
+input[type="submit"] {
+  grid-column: 2 / 3;
+  width: 9em;
+} */
+
+/* this is form configuration */
+
+/* @keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+/* @media (min-width: 600px) {
+  header {
+    background-image: url(bigfish.gif);
+  }
+  h1 {
+    font-size: 3em;
+  }
+  nav ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+  nav li {
+    border-bottom: none;
+  }
+
+  #flow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  section {
+    min-width: 30%;
+    flex: 1;
+  }
+
+  dl {
+    flex: 2;
+  }
+
+  img {
+    flex: 1;
+  }
+
+  #mobile {
+    display: none;
+  }
+
+  #desktop {
+    display: inline;
+  }
+
+  form {
+    display: grid;
+    width: 40%;
+    gap: 1em;
+    grid-template-columns: 6em 1fr;
+  }
+
+  article {
+    flex: 2;
+  }
+} */
+
+/* @media (min-width: 1024px) {
+  @supports (display: grid) {
+    header {
+      grid-area: header;
+    }
+    nav {
+      grid-area: nav;
+    }
+    main {
+      grid-area: main;
+    }
+    footer {
+      grid-area: footer;
+    }
+
+    #wrapper {
+      display: grid;
+      grid-template:
+        "header header"
+        "nav  main"
+        "nav  footer"
+        / 180px;
+    }
+    nav ul {
+      flex-direction: column;
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+  }
+} */

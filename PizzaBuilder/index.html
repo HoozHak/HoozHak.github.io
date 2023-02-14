@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Pizza Builder</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="modernizr.custom.65897.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Pizza Builder</h1>
+        </header>
+        <main>
+            <form>
+
+                <h3>Choose your toppings:</h3>
+                <input id="topPepperoni" type="checkbox"  name="Pepperoni">&nbsp;<label for="Pepperoni">Pepperoni</label><br>
+                <input id="topSausage" type="checkbox"  name="Sausage">&nbsp;<label for="Sausage">Sausage</label><br>
+                <input id="topAnchovies" type="checkbox"  name="Anchovies">&nbsp;<label for="Anchovies">Anchovies</label><br>
+                <input id="topBell" type="checkbox"  name="Bell Pepper">&nbsp;<label for="Bell_Pepper">Bell Pepper</label><br>
+                <input id="topOnion" type="checkbox"  name="Onion">&nbsp;<label for="Onion">Onion</label><br>
+                <input id="topPineapple" type="checkbox"  name="Pineapple">&nbsp;<label for="Pineapple">Pineapple</label><br>
+                <input id="topMushroom" type="checkbox"  name="Mushroom">&nbsp;<label for="Mushroom">Mushroom</label><br>
+                <input id="topGoat" type="checkbox"  name="goatCheese">&nbsp;<label for="goatCheese">Goat Cheese</label><br>
+                <input id="topTomato" type="checkbox"  name="Tomato">&nbsp;<label for="Tomato">Tomato</label><br>
+
+                <h3>Select the Type of Crust:</h3>
+                <input id="thinCrust" type="radio"  name="crustType">&nbsp;<label for="thinCrust">Thin Crust</label><br>
+                <input id="handTossed"type="radio"  name="crustType">&nbsp;<label for="handTossed">Hand Tossed</label><br>
+                <input id="pan" type="radio"  name="crustType">&nbsp;<label for="pan">Pan</label><br>
+
+                <h3>Payment Method:</h3>
+                <input id="Card" type="radio"  name="Payment">&nbsp;<label for="Card">Card</label><br>
+                <input id="inStore" type="radio"  name="Payment">&nbsp;<label for="inStore">Pay In Store</label><br>
+                <input id="PayPal" type="radio"  name="Payment">&nbsp;<label for="PayPal">PayPal</label><br><br>
+                <input id="submit" type="submit"  name="Submit">&nbsp;<label for="Submit"></label><br>
+
+            </form>
+        </main>
+        <script>
+            function Calculate(){
+                var crustType = [];
+                var toppings = [];
+                var payment = [];
+
+                //Checking for radio button crust selections
+                if(document.getElementById("handTossed").checked === true){crustType.push("Hand Tossed");}
+                if(document.getElementById("thinCrust").checked === true){crustType.push("Thin Crust");}
+                if(document.getElementById("pan").checked === true){crustType.push("Deep Dish Pan");}
+
+
+                //Checking for checkbox topping selections
+                if(document.getElementById("topAnchovies").checked === true){toppings.push("Anchovies");}
+                if(document.getElementById("topPepperoni").checked === true){toppings.push("Pepperoni");}
+                if(document.getElementById("topSausage").checked === true){toppings.push("Sausage");}
+                if(document.getElementById("topOnion").checked === true){toppings.push("Onion");}
+                if(document.getElementById("topBell").checked === true){toppings.push("Bell Pepper");}
+                if(document.getElementById("topPineapple").checked === true){toppings.push("Pineapple");}
+                if(document.getElementById("topTomato").checked === true){toppings.push("Tomato");}
+                if(document.getElementById("topGoat").checked === true){toppings.push("Goat Cheese");}
+                if(document.getElementById("topMushroom").checked === true){toppings.push("Mushroom");}
+                
+                //Checking for radio button payment method
+                if(document.getElementById("Card").checked === true){payment.push("Card");}
+                if(document.getElementById("inStore").checked === true){payment.push("inStore");}
+                if(document.getElementById("PayPal").checked === true){payment.push("PayPal");}
+                //output
+                document.write("Congratulations! You just ordered a delicious " + crustType + " pizza pie with " + toppings + " fresh toppings" + "<br>" + "You will be paying with " + payment);
+            }
+            document.getElementById("submit").addEventListener("click",Calculate,false);
+        </script>
+    </body>
+</html>
