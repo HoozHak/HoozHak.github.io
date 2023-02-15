@@ -92,15 +92,7 @@ function validateForm(evt)
     }
 }
 
-/* run setup functions when page finishes loading */
-if (window.addEventListener)
-{
-    window.addEventListener("load", createEventListeners, false);
-}
-else if (window.attachEvent)
-{
-    window.attachEvent("onload", createEventListeners);
-}
+
 
 /* validate number fields for older browsers */
 function validateNumbers()
@@ -139,4 +131,67 @@ function validateNumbers()
         numErrorDiv.innerHTML = msg;
         formValidity = false;
     }
+}
+
+// remove fallback placeholder text
+
+function zeroPlaceholder()
+{
+    var addressBox = document.getElementById("addrinput");
+    addressBox.style.color = "black";
+    if (addressBox.value === addressBox.placeholder)
+    {
+        addressBox.value = "";
+    }
+}
+
+/* restore placeholder text if box contains no user entry */
+function checkPlaceholder()
+{
+    var addressBox = document.getElementById("addrinput");
+    if (addressBox.value === "")
+    {
+        addressBox.style.color = "rgb(178,184,183)";
+        addressBox.value = addressBox.placeholder;
+    }
+}
+
+/* add placeholder text for browsers that don't support placeholder attribute */
+function generatePlaceholder()
+{
+    if (!Modernizr.input.placeholder)
+    {
+        var addressBox = document.getElementById("addrinput");
+        addressBox.value = addressBox.placeholder;
+        addressBox.style.color = "rgb(178,184,183)";
+        if (addressBox.addEventListener)
+        {
+            addressBox.addEventListener("focus", zeroPlaceholder, false);
+            addressBox.addEventListener("blur", checkPlaceholder, false);
+        }
+        else if (addressBox.attachEvent)
+        {
+            addressBox.attachEvent("onfocus", zeroPlaceholder);
+            addressBox.attachEvent("onblur", checkPlaceholder);
+        }
+    }
+}
+
+/* run intial form configuration functions */
+function setUpPage()
+{
+    createEventListeners();
+    generatePlaceholder();
+}
+
+
+
+/* run setup functions when page finishes loading */
+if (window.addEventListener)
+{
+    window.addEventListener("load", setUpPage, false);
+}
+else if (window.attachEvent)
+{
+    window.attachEvent("onload", setUpPage);
 }
