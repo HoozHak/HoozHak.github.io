@@ -12,7 +12,7 @@
       "strict mode";
 
       /* var newAccountArray = [];   */  //4a
-      var newAccountObject{};
+      var newAccountObject = {};
       var newAccountSubmission;
 
       function createID()
