@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="description" content="The Gathering, Magic The Gathering, shop and how to play.">
+<title>The Gathering - Fun Time!</title>
+<!-- <link href="styles.css" rel="stylesheet"> -->
+<script src="modernizr.custom.05819.js"></script>
+
+
+  
+</head>
+
+
+<body onload=display_ct();>
+  <span id='ct' ></span>
+
+<header>
+    <h1><a href="index.htm">The Gathering - Magic The Gathering Website</a></h1>
+</header>
+
+<nav>
+    <ul>
+      <li><a href="index.htm">Home</a></li>
+      <li><a href="rules.htm">How To Play</a></li>
+      <li><a href="shop.htm">Shop</a></li>
+      <li><a href="about.htm">About Us</a></li>
+      <li><a href="webSecurity.htm">Web Security</a></li>
+      <li><a href="funTime.htm">Fun Time!</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- create a function to ask for and calculate the time difference. -->
+    <script>
+      function calulateElapsedTime() {
+      var dateObj = new Date();
+      var day = parseInt(document.frm.day.value);
+      var month = parseInt(document.frm.month.value);
+      var year = parseInt(document.frm.year.value);
+      
+      var dateInput =
+      day.toString() + "/" + month.toString() + "/" + year.toString();
+      var systemDate =
+      dateObj.getFullYear() +
+      "/" +
+      dateObj.getMonth() +
+      "/" +
+      dateObj.getDay();
+      
+      var dateFirst = new Date(dateInput);
+      var dateSecond = new Date(systemDate);
+      
+      // time difference
+      var timeDiff = Math.abs(dateSecond.getTime() - dateFirst.getTime());
+      
+      // days difference
+      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+      
+      // calculate day , month and year
+      year = Math.floor(diffDays / 365);
+      diffDays = diffDays - year * 365;
+      month = Math.floor(diffDays / 30);
+      diffDays = diffDays - month * 30;
+      day = diffDays;
+      
+      // displays the results in a pop up window
+      var message =
+     
+      year.toString() +
+      " year(s) " +
+      month.toString() +
+      " month(s) and " +
+      day.toString() +
+      " day(s) ";
+      
+      
+      document.getElementById("demo").innerHTML = message;
+      alert(message);
+      }
+      </script>
+
+    
+  
+
+    <!-- <!= =====================THIS IS THE CONTENT AREA================================> -->
+    
+    
+    <h2>Want To Have A Little Fun With Time?</h2><br>
+    <p>
+      Below is a little program to have fun with time. You enter a date and I will tell you how much time has passed from now 'till the date entered.  <br>
+      <br>
+    </p>
+
+    <br>
+    <form name="frm">
+      <label for="day">Enter day:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="number" id="day" name="day" /><br />
+      <label for="month">Enter month:</label>
+      <input type="number" id="month" name="month" /><br />
+      <label for="year">Enter year:&nbsp;&nbsp;&nbsp;</label>
+      <input type="number" id="year" name="year" /><br /><br />
+      <input type="submit" value="Calculate" onclick="calulateElapsedTime()" />
+      
+      </form>
+      <br />
+      <p id="demo"></p>
+    
+
+  
+
+    
+
+    <div class="addy">
+      <br><br>The Gathering - A MTG Website <br />
+      800-555-5555<br />
+      1123 Squeaker Drive<br />
+      Magic Town, CA 90210<br>
+    </div>
+  </main>
+
+  <footer>
+    <br>
+    Copyright &copy; 2023 The Javascript Gathering<br />
+
+    <a href="mailto:TheJavascriptGathering@gmail.com"
+      >TheJavaScriptGathering@gmail.com</a
+    >
+  </footer>
+</div>
+</body>
+</html>

@@ -31,20 +31,210 @@
   <main>
     <!-- <!= =====================THIS IS THE CONTENT AREA================================> -->
 
-   <!--  <section>
-    <h2>We'</h2>
-    <p>
-      You foun!
-    </p>
-  </section>
+    <style>
+      p {
+        line-height: 1.3;}
+      ul {
+        line-height: 1.3;
+        padding: 1px
+      }
+    </style>
 
-    <section>
-      <h2>I Ow!</h2>
-
-      <p>
-        As a
-      </p>
-    </section> -->
+    <h2>
+      <a name="actions"></a>
+      Game Actions
+  </h2>
+  <p>This section describes the actions that you’ll take during a game, including tapping your cards, casting spells, and attacking and blocking with creatures in combat.</p>
+  <h3>TAPPING AND UNTAPPING</h3>
+  <p>
+      To tap a card is to turn it sideways to show that it has been used for the turn. You do this when you use a land to make mana, when you attack with a creature, or when you activate an ability that has the <img src="https://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_manacost/manasymbols/tap.gif"></img>
+      symbol as part of its cost (<img src="https://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_manacost/manasymbols/tap.gif"></img>
+      means "tap this permanent"). When a permanent is tapped, you can’t tap it again until it’s been untapped (turned back upright). As your turn begins, untap your tapped cards so you can use them again.
+  </p>
+  <h3>CASTING SPELLS</h3>
+  <p>
+      To cast a spell, you must pay its mana cost (located in the upper right corner of the card) by tapping lands (or other permanents) to make the amount and Game Actions type of mana which that spell requires. For example, if you were casting Serra Angel, which costs <img src="https://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_manacost/manasymbols/colorless3.gif"></img>
+      <img src="https://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_manacost/manasymbols/white.gif"></img>
+      <img src="https://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_manacost/manasymbols/white.gif"></img>
+      , you could tap three basic lands of any type to pay <img src="https://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_manacost/manasymbols/colorless3.gif"></img>
+      plus two Plains to pay <img src="https://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_manacost/manasymbols/white.gif"></img>
+      <img src="https://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_manacost/manasymbols/white.gif"></img>
+      .
+  </p>
+  <p>Once a spell has been cast, one of two things happens. If the spell is an instant or a sorcery, you follow the instructions on the card, and then you put the card into your graveyard. If the spell is a creature, artifact, or enchantment, you put the card on the table in front of you. The card is now on the battlefield.</p>
+  <p>Cards on the battlefield are called permanents to differentiate them from instants and sorceries, which are never on the battlefield.</p>
+  <p>&nbsp;</p>
+  <center>
+      <img src="//media.wizards.com/2018/mtg_portal/castingex.png" style="max-width:100%"/>
+  </center>
+  <p>&nbsp;</p>
+  <h3>ATTACKING AND BLOCKING</h3>
+  <p>The most common way to win the game is to attack with your creatures. If a creature that is attacking an opponent isn’t blocked, it deals damage equal to its power to that opponent.</p>
+  <p>The middle phase of each turn is the combat phase. In your combat phase, you choose which of your creatures will attack, and you choose which opponents they will attack. Tap your creatures to show that they are attacking. Your opponents then choose which of their creatures will block, if any. Tapped creatures can’t be declared as blockers.</p>
+  <p>Once all blockers have been chosen, each creature—both attackers and blockers—simultaneously deals damage equal to its power (the number on the left side of the slash in the lower right corner of the card).</p>
+  <!--- <img src="DAMAGEEXAMPLE">-->
+  <ul>
+      <li><br>An attacking creature that isn’t blocked deals damage to the player it’s attacking.</li>
+      <li>An attacking creature that is blocked deals damage to the creature or creatures that are blocking it, and vice versa.<br></li>
+  </ul>
+  <p><br>If damage is dealt to your opponent, they lose that much life.</p>
+  <p>If one of your attacking creatures is blocked by multiple creatures, you decide how to divide its combat damage among them. You must assign at least enough damage to the first blocking creature to destroy it before you can assign damage to the second one, and so on.</p>
+  <p>If a creature is dealt damage equal to or greater than its toughness over the course of a single turn (whether it be combat damage, damage from spells or abilities, or a combination of both), that creature is destroyed, and it goes to its owner’s graveyard (or "dies"). If a creature takes damage that isn’t enough to destroy it in a single turn, that creature stays on the battlefield, and the damage wears off at the end of the turn.</p>
+  <h3>In the following examples, an opponent is attacking you with a variety of creatures:</h3>
+  <div class="creator-list">
+      <center style="margin: 40px 25px 0px">
+          <img src="//media.wizards.com/2018/mtg_portal/unblocked.png" style="padding-top: 10px"/>
+          <br/>
+          <font size="4">Mesa Unicorn deals 2 damage to you.</font>
+      </center>
+      <center style="margin: 40px 25px 0px">
+          <img src="//media.wizards.com/2018/mtg_portal/attackerdead.png" style="padding-top: 10px"/>
+          <br/>
+          <font size="4">Mesa Unicorn is destroyed.</font>
+      </center>
+      <center style="margin: 40px 25px 0px">
+          <img src="//media.wizards.com/2018/mtg_portal/bothlive.png" style="padding-top: 10px"/>
+          <br/>
+          <font size="4">Both creatures survive.</font>
+      </center>
+      <center style="margin: 40px 25px 0px">
+          <img src="//media.wizards.com/2018/mtg_portal/defenderdead.png" style="padding-top: 10px"/>
+          <br/>
+          <font size="4">Giant Spider is destroyed.</font>
+      </center>
+  </div>
+  <p>&nbsp;</p>
+  <p>In this example, Dwarven Priest is attacking, and you have two creatures that can block. When you block one attacker with two or more creatures, your opponent must choose the order in which your blockers will take damage. Remember, the attacking player always chooses the order in which blocking creatures receive damage.</p>
+  <p>&nbsp;</p>
+  <p>Reclamation Sage and Giant Spider will deal a total of 4 damage to Dwarven Priest, which is enough to destroy it. Meanwhile, Dwarven Priest can deal enough damage to destroy Reclamation Sage, but not enough to destroy Giant Spider. Since your opponent’s Dwarven Priest will be destroyed in either case, they order Reclamation Sage before Giant Spider so that at least one of your creatures will be destroyed.</p>
+  <p>&nbsp;</p>
+  <center>
+      <img src="//media.wizards.com/2018/mtg_portal/doubleblock.png"/>
+  </center>
+  <p>&nbsp;</p>
+  <p>Once blockers have been ordered, damage is dealt. Dwarven Priest deals 1 damage to Reclamation Sage, destroying it, then deals its remaining 1 damage to Giant Spider.</p>
+  <h2>Advanced Topics</h2>
+  <p>
+      One of the most fun and interesting aspects of the <em>Magic</em>
+      game is the tremendous number of unique cards you can play with, which in turn provide an incredibly wide range of things that could happen in any given game. This section is a reference for when you need to know more details about the rules of <em>Magic</em>
+      .
+  </p>
+  <h2>
+      <a name="target"></a>
+      TARGETING
+  </h2>
+  <p>Some spells and abilities use the word "target" to describe something that the spell or ability will affect. You must choose all targets for a spell when you cast it, and for an ability when it triggers or when you activate it. If you can’t meet the targeting requirements, you can’t cast the spell or use the ability. For example, if a spell has the text "Destroy target creature," but there are no creatures on the battlefield, you can’t cast that spell because it has no valid targets.</p>
+  <p>If a spell "deals damage to any target," you can choose any creature or player (or planeswalker, if a player has one) as a target for that spell.</p>
+  <p>Once you choose targets, you can’t change your mind later. When the spell or ability resolves, it checks the targets to make sure they’re still legal (that is, they’re still there and they still match the requirements of the spell or ability). If a target isn’t legal, the spell or ability can’t affect it. If none of the targets are legal, the spell or ability &nbsp;does nothing at all.</p>
+  <h2>
+      <a name="stack"></a>
+      THE STACK
+  </h2>
+  <p>The stack is a game zone shared by all players (like the battlefield) where spells and abilities wait to resolve. Resolving a spell or ability simply means that its effect happens.</p>
+  <p>
+      <strong>Using the Stack</strong>
+      <br/>When you cast a spell or activate an ability, it doesn’t resolve right away—it goes on the stack. Spells and abilities remain on the stack until both players choose not to cast any new spells or activate any new abilities. Triggered abilities also go on the stack until they resolve.
+  </p>
+  <p>When you have finished putting spells and abilities on the stack, priority then passes to the next player in turn order, who may want to use a spell or ability of their own in response. Subsequent players (including you) can then respond to that player’s response, and so on—the result is a "stack" waiting to resolve. Spells and abilities remain on the stack until all players choose not to cast any new spells or activate any new abilities.</p>
+  <p>
+      <em>A general rule is that spells and abilities on the stack resolve one by one, beginning with the last one put on the stack.</em>
+  </p>
+  <p>
+      <strong>Responding to Spells and Abilities</strong>
+      <br/>When you cast a spell or activate an ability, it doesn’t resolve right away—it goes on the stack. Spells and abilities remain on the stack until both players choose not to cast any new spells or activate any new abilities. Triggered abilities also go on the stack until they resolve.
+  </p>
+  <p>Each player has an opportunity to cast an instant spell (or activate an activated ability) in response to any spell or ability that goes on the stack. If a player does decide to respond, their spell or ability goes on the stack on top of what was already waiting there. When all players pass—that is, decline to do anything more—the top spell or ability on the stack will resolve.</p>
+  <p>&nbsp;</p>
+  <center>
+      <img src="//media.wizards.com/2018/mtg_portal/stackimg.png"/>
+  </center>
+  <p>&nbsp;</p>
+  <p>After a spell or ability resolves, both players again get the chance to respond. If no one does, the next thing waiting on the stack will resolve. If the stack is empty, the current step of the turn will end, and the game will proceed to the next step.</p>
+  <p>
+      <strong>Example of Spells on the Stack</strong>
+      <br/>Your opponent casts Shock targeting your Eager Construct, a 2/2 creature. Shock goes on the stack. You respond to Shock by casting Titanic Growth. Titanic Growth goes on the stack on top of Shock. You and your opponent both decline to do anything else.
+  </p>
+  <p>Titanic Growth resolves, making Eager Construct a 6/6 until the end of the turn. Then Shock resolves and deals 2 damage to the pumped-up Eager Construct, which is not enough to destroy it.</p>
+  <p>&nbsp;</p>
+  <center>
+      <img src="//media.wizards.com/2018/mtg_portal/stackex.png"/>
+  </center>
+  <p>&nbsp;</p>
+  <p>
+      <strong>What would happen if Titanic Growth were cast first?</strong>
+      <br/>The Shock would go on the stack on top of Titanic Growth, which means it would resolve first this time. Shock would still deal 2 damage to Eager Construct, but this time that damage is being dealt before Titanic Growth can resolve and take effect—so 2 damage is enough to destroy Eager Construct!
+  </p>
+  <p>&nbsp;</p>
+  <center>
+      <img src="//media.wizards.com/2018/mtg_portal/stackex2.png"/>
+  </center>
+  <h2>
+      <a name="turn"></a>
+      Parts of the Turn
+  </h2>
+  <p>Each turn proceeds in the same sequence. Whenever you enter a new step or phase, any triggered abilities that happen during that step or phase trigger and are put on the stack. The active player (the player whose turn it is) gets to start casting spells and activating abilities, then each other player in turn order will too. When all players decline to do anything more and nothing is on the stack waiting to resolve, the game will move to the next step.</p>
+  <p>&nbsp;</p>
+  <center>
+      <img src="//media.wizards.com/2018/mtg_portal/yourturn.png"/>
+  </center>
+  <p>&nbsp;</p>
+  <h3>BEGINNING PHASE</h3>
+  <ul>
+      <li>
+          <strong>Untap step</strong>
+          <br/>You untap all your tapped permanents. On the first turn of the game, you don’t have any permanents, so you just skip this step. No one can cast spells or activate abilities during this step.
+      </li>
+      <li>
+          <strong>Upkeep step</strong>
+          <br/>Players can cast instants and activate abilities. This part of the turn is mentioned on a number of cards. If something is supposed to happen just once per turn, right at the beginning, an ability will trigger "at the beginning of your upkeep."
+      </li>
+      <li>
+          <strong>Draw step</strong>
+          <br/>You must draw a card from your library (even if you don’t want to). The player who goes first in a two-player game skips the draw step on their first turn to make up for the advantage of going first. Players can then cast instants and activate abilities.
+      </li>
+  </ul>
+  <h3>FIRST MAIN PHASE</h3>
+  <ul>
+      <li>You can cast any number of sorceries, instants, creatures, artifacts, enchantments, and planeswalkers, and you can activate abilities. You can play a land during this phase, but remember that you can play only one land during your turn. Your opponent can cast instants and activate abilities.</li>
+  </ul>
+  <h3>COMBAT PHASE</h3>
+  <ul>
+      <li>
+          <strong>Beginning of combat step</strong>
+          <br/>Players can cast instants and activate abilities.
+      </li>
+      <li>
+          <strong>Declare attackers step</strong>
+          <br/>You decide which, if any, of your untapped creatures will attack, and which player or planeswalker they will attack. This taps the attacking creatures. Players can then cast instants and activate abilities.
+      </li>
+      <li>
+          <strong>Declare blockers step</strong>
+          <br/>Your opponent decides which, if any, of their untapped creatures will block your attacking creatures. If multiple creatures block a single attacker, you order the blockers to show which will be first to receive damage, which will be second, and so on. Players can then cast instants and activate abilities.
+      </li>
+      <li>
+          <strong>Combat damage step</strong>
+          <br/>Each attacking or blocking creature that’s still on the battlefield assigns its combat damage to the defending player (if it’s attacking that player and wasn’t blocked), to a planeswalker (if it’s attacking that planeswalker and wasn’t blocked), to the creature or creatures blocking it, or to the creature it’s blocking. If an attacking creature is blocked by multiple creatures, you divide its combat damage among them by assigning at least enough damage to the first blocking creature to destroy it, then by assigning damage to the second one, and so on. Once players decide how the creatures they control will deal their combat damage, the damage is all dealt at the same time. Players can then cast instants and activate abilities.
+      </li>
+      <li>
+          <strong>End of combat step</strong>
+          <br/>Players can cast instants and activate abilities.
+      </li>
+  </ul>
+  <h3>SECOND MAIN PHASE</h3>
+  <ul>
+      <li>Your second main phase is just like your first main phase. You can cast any type of spell and activate abilities, but your opponent can only cast instants and activate abilities. You can play a land during this phase if you didn’t play one during your first main phase.</li>
+  </ul>
+  <h3>ENDING PHASE</h3>
+  <ul>
+      <li>
+          <strong>End step</strong>
+          <br/>Abilities that trigger “at the beginning of your end step” go on the stack. Players can cast instants and activate abilities.
+      </li>
+      <li>
+          <strong>Cleanup step</strong>
+          <br/>If you have more than seven cards in your hand, choose and discard cards until you have only seven. Next, all damage on creatures is removed and all “until end of turn” effects end. No one can cast instants or activate abilities unless an ability triggers during this step.
+      </li>
+  </ul>
 
     <section>
       <br>

@@ -8,7 +8,7 @@ Date:   2/15/23
 Filename: script.js */
 "use strict";
 
-var delivInfo = {};
+var delivInfo = {}; //4a
 var delivSummary = document.getElementById("deliverTo");
 
 //function to process delivery info

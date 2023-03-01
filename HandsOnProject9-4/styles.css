@@ -1,6 +1,6 @@
 /*  JavaScript 6th Edition
-    Chapter 1
-    Hands-on Project 1-5
+    Chapter 9
+    Hands-on Project 9-4
 
     Filename: styles.css
 */
@@ -71,46 +71,11 @@ header {
    line-height: 1.5em;
    border-bottom: 1px solid black;
 }
-/* nav bar */
-
-nav {
-   text-decoration-color: white;
-   background-color: #000000;
-   float: center;
-   width: 640px;
-   height: 100px;
-   font-weight: bold;
-   padding: .5em;
- }
-
- nav ul {
-   list-style-type: none;
- }
- 
- nav ul li a {
-   text-decoration: none;
- }
-
- a:hover {
-   color: #f0fc52
- }
- 
- a:link {
-   color: #7c812c;
- }
- 
- a:visited {
-   color: #a72312;
- }
- 
- a:active {
-   color: #1854a8;
- }
 
 /* main content */
 article {
    width: 640px;
-   text-align: center;
+   text-align: left;
    background: ivory;
    padding: 20px;
 }
@@ -119,30 +84,71 @@ h2 {
    font-weight: bold;
    font-size: 30px;
    text-align: center;
-   padding: 20px;
 }
 
-h3 {
-   font-weight: bold;
-   font-size: 20px;
+#errorMessage {
+   display: none;
+   width: 80%;
    text-align: center;
-   padding: 20px;
+   padding: 10px;
+   margin: 15px auto 5px;
+   background: #e3d5ba;
+   color: black;
+   border: 5px solid rgb(190,50,38);
+   font-weight: bold;
 }
+
 
 /* form */
-/* form {
-   margin: 5px auto;
-} */
+form {
+   padding: 10px;
+}
 
-/* input {
-   float: left;
-   clear: left;
-   margin: 1px;
-} */
+fieldset {
+   margin-bottom: 10px;
+   position: relative;
+   padding: 2.5em 1em 0.5em 1em;
+   background: #e3d5ba;
+}
+
+legend {
+   font-family: arial, helvetica, sans-serif;
+   font-weight: bold;
+   position: absolute;
+   top: 0;
+   left: 0;
+   font-size: 1.25em;
+   margin-top: 0.5em;
+   margin-left: 0.5em;
+}
+
+input {
+   font-size: 1em;
+   display: block;
+   margin-left: 130px;
+}
 
 label {
-   float: center;
-   padding: 10px;
-   font-size: 1.4em;
-} 
+   display: block;
+   float: left;
+   clear: left;
+   margin-top: 5px;
+}
 
+#rememberinput, #rememberlabel {
+   display: inline-block;
+   float: none;
+   clear: none;
+}
+
+#submitBtn {
+   font-size: 1.25em;
+   margin: 0 auto;
+}
+
+#submitbutton {
+   background: inherit;
+   border: none;
+   padding: 0;
+   text-align: center;
+}

@@ -1,7 +1,7 @@
 
       /* JavaScript 6th Edition
       Chapter 9
-      Hands-on Project 9-2
+      Hands-on Project 9-3
 
       Author: Coty O'Dea 
       Date:   2/20/23   
@@ -10,7 +10,16 @@
 
 function processCookie() //6a Declare a new function named processCookie() containing the following statement
 {
+    if (document.getElementById("rememberinput").checked)
+    {
     document.cookie = "username=" + document.getElementById("usernameinput").value;
+    }
+    else
+    {
+        var expiresDate = new Date();
+        expiresDate.setDate(expiresDate.getDate() - 7);
+        document.cookie = "username=null; expires=" + expiresDate.toUTCString;
+    }
 }
 
 function populateInfo() //7a Declare a new function named processCookie() containing the following statement
@@ -37,16 +46,18 @@ function handleSubmit() //8a Declare a new function named handleSubmit() that ta
     document.getElementsByTagName("form")[0].submit();
 }
 
-function createEventListener() //9a Add the following code to create an event listener, and to call the populateInfo() and createEventListener() functions when the page finishes loading
-{
-    var loginForm = document.getElementsByTagName("form") [0];
+function createEventListener() 
+{	
+    var loginForm = document.getElementsByTagName("form")[0];
+
     if (loginForm.addEventListener)
     {
-        loginForm.addEventListener("submit", handleSubmit, false);
+        loginForm.addEventListener("submit", handleSubmit,false); 
     }
-    else if (loginForm.attachEvent)
+    else if (loginForm.attachEvent) 
     {
         loginForm.attachEvent("onsubmit", handleSubmit);
+        
     }
 }
 
